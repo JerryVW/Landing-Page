@@ -21,7 +21,7 @@ html {
 			from(rgba(0, 0, 0, 0.4)),
 			to(rgba(0, 0, 0, 0.4))
 		),
-		url('images/automation2.jpeg');
+		url('images/automation2.jpg');
 	background: -o-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
 		url('images/automation2.jpeg');
 	background: linear-gradient(
@@ -126,10 +126,6 @@ h3 {
 	line-height: 35px;
 	border-radius: 20px;
 	margin-right: 160px;
-}
-
-.training-classes:hover li {
-	color: rgb(5, 236, 55);
 }
 
 @media only screen and (min-width: 1655px) {
