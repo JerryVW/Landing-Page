@@ -21,15 +21,15 @@ html {
 			from(rgba(0, 0, 0, 0.4)),
 			to(rgba(0, 0, 0, 0.4))
 		),
-		url('images/automation.jpeg');
+		url('images/automation1.jpeg');
 	background: -o-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-		url('images/automation.jpeg');
+		url('images/automation1.jpeg');
 	background: linear-gradient(
 			to bottom,
 			rgba(0, 0, 0, 0.4),
 			rgba(0, 0, 0, 0.4)
 		),
-		url('images/automation.jpeg');
+		url('images/automation1.jpeg');
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
