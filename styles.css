@@ -45,6 +45,17 @@ body {
 /*----------------------------------------------
 2. Header & Nav Styles
 ----------------------------------------------*/
+a:link {
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+h2 {
+	position: absolute;
+	color: whitesmoke;
+	margin-left: 35px;
+	margin-top: 35px;
+}
 
 .nav-header {
 	color: whitesmoke;
@@ -67,24 +78,28 @@ body {
 	color: whitesmoke;
 	position: absolute;
 	display: block;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	top: 40%;
+	left: 25%;
 	text-align: center;
 	line-height: 50px;
+	animation: fadeUpAnimation 1s;
+}
+
+@keyframes fadeUpAnimation {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(200px);
+		transform: translateY(200px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
 }
 
 .call-to-action h1 {
 	font-size: 2.3em;
-}
-
-h2 {
-	position: absolute;
-	color: whitesmoke;
-	margin-left: 35px;
-	margin-top: 35px;
 }
 
 h3 {
@@ -127,6 +142,29 @@ h3 {
 	border-radius: 20px;
 	margin-right: 160px;
 	display: none;
+	animation: fadeInAnimation ease 0.5s;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadeout {
+	animation: fadeOutAnimation ease 0.5s;
+}
+
+@keyframes fadeOutAnimation {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 @media only screen and (min-width: 1655px) {
