@@ -82,7 +82,7 @@ h2 {
 	left: 25%;
 	text-align: center;
 	line-height: 50px;
-	animation: fadeUpAnimation 1s;
+	animation: fadeUpAnimation 1.5s;
 }
 
 @keyframes fadeUpAnimation {
