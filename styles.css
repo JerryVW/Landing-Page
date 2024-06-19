@@ -109,7 +109,7 @@ h3 {
 	transform: translateY(4px);
 }
 
-.services-model {
+.services-modal {
 	display: flex;
 	flex-direction: row;
 	justify-content: end;
@@ -126,6 +126,7 @@ h3 {
 	line-height: 35px;
 	border-radius: 20px;
 	margin-right: 160px;
+	display: none;
 }
 
 @media only screen and (min-width: 1655px) {
