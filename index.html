@@ -19,10 +19,14 @@
 			</nav>
 
 			<section class="call-to-action">
-				<h1>Want to Take Your Automation to the Next Level?</h1>
-				<h3>We can urn your Techs into automation aficionados.</h3>
-				<h3>Click the button below to get started!</h3>
-				<button class="get-started">GET STARTED</button>
+				<div id="action-container" class="action-container">
+					<h1>Want to Take Your Automation to the Next Level?</h1>
+					<h3>We can urn your Techs into automation aficionados.</h3>
+					<h3>Click the button below to get started!</h3>
+					<button id="get-started" class="get-started">
+						GET STARTED
+					</button>
+				</div>
 			</section>
 
 			<section class="services-modal" id="services-modal">
@@ -33,6 +37,63 @@
 					<li><a href="program-plc.html">Programming a PLC</a></li>
 				</ul>
 			</section>
+
+			<form class="info-form" action=" ">
+				<div id="classes-info" class="form-container">
+					<div class="child">
+						<label for="first-name">First Name</label><br />
+						<input
+							id="first-name"
+							type="text"
+							name="first-name"
+							placeholder="First Name"
+						/><br />
+						<label for="last-name">Last Name</label><br />
+						<input
+							id="last-name"
+							type="text"
+							name="last-name"
+							placeholder="Last Name"
+						/><br />
+						<label for="email" required>Email</label><br />
+						<input
+							id="email"
+							type="email"
+							name="email"
+							placeholder="Email"
+						/><br />
+
+						<h4>Choose the courses you want.</h4>
+						<input
+							type="checkbox"
+							name="abb-robot"
+							id="abb-robot"
+						/>
+						<label for="abb-robot">ABB Robot</label><br />
+						<input
+							type="checkbox"
+							name="fanuc-robot"
+							id="fanuc-robot"
+						/>
+						<label for="fanuc-robot">Fanuc Robot</label><br />
+						<input
+							type="checkbox"
+							name="build-plc"
+							id="build-plc"
+						/>
+						<label for="build-plc">Building a PLC</label><br />
+						<input
+							type="checkbox"
+							name="program-plc"
+							id="program-plc"
+						/>
+						<label for="program-plc">Programming a PLC</label><br />
+						<button id="submit" class="submit" type="submit">
+							Submit
+						</button>
+					</div>
+				</div>
+			</form>
 		</section>
 
 		<script type="text/javascript" src="app.js"></script>
