@@ -128,6 +128,10 @@ h3 {
 	transform: translateY(4px);
 }
 
+#services {
+	cursor: pointer;
+}
+
 .services-modal {
 	display: flex;
 	flex-direction: row;
@@ -158,6 +162,18 @@ h3 {
 	}
 }
 
+.dropdown-arrow {
+	display: inline-block;
+	transform: rotate(-90deg);
+	margin-left: 5px;
+	transition: all ease 0.5s;
+}
+
+.rotate-arrow {
+	transform: rotate(90deg);
+	transition: all ease 0.5s;
+}
+
 .info-form {
 	position: absolute;
 	width: 100%;
@@ -168,7 +184,7 @@ h3 {
 .form-container {
 	position: relative;
 	color: whitesmoke;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	background-color: #005786;
 	width: 280px;
 	height: 450px;
@@ -211,7 +227,7 @@ input[type='email'] {
 	color: whitesmoke;
 	font-size: 1em;
 	border: none;
-	margin-left: 25px;
+	margin-left: 15px;
 }
 
 .submit:hover {
@@ -233,6 +249,33 @@ input[type='email'] {
 	100% {
 		opacity: 0;
 	}
+}
+
+.confirmation {
+	position: absolute;
+	width: 100%;
+	top: 40%;
+}
+
+.confirmation-message {
+	color: whitesmoke;
+	display: block;
+	margin: auto;
+	height: 200px;
+	text-align: center;
+	line-height: 50px;
+	animation: fadeInAnimation ease 0.8s;
+	display: none;
+}
+
+.close {
+	width: 150px;
+	height: 45px;
+	border-radius: 20px;
+	background-color: #0077b6;
+	color: whitesmoke;
+	font-size: 1em;
+	border: none;
 }
 
 /*----------------------------------------------

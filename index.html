@@ -13,7 +13,11 @@
 				<ul class="nav-bar">
 					<li><a href="home.html">HOME</a></li>
 					<li><a href="about.html">ABOUT</a></li>
-					<li id="services"><a href="services.html">SERVICES</a></li>
+					<li id="services">
+						SERVICES<span id="rotate-arrow" class="dropdown-arrow"
+							>&#60;</span
+						>
+					</li>
 					<li><a href="contact.html">CONTACT</a></li>
 				</ul>
 			</nav>
@@ -38,7 +42,7 @@
 				</ul>
 			</section>
 
-			<form class="info-form" action=" ">
+			<form id="info-form" class="info-form" action=" ">
 				<div id="classes-info" class="form-container">
 					<div class="child">
 						<label for="first-name">First Name</label><br />
@@ -63,7 +67,7 @@
 							placeholder="Email"
 						/><br />
 
-						<h4>Choose the courses you want.</h4>
+						<p>Choose the courses you want.</p>
 						<input
 							type="checkbox"
 							name="abb-robot"
@@ -88,12 +92,21 @@
 							id="program-plc"
 						/>
 						<label for="program-plc">Programming a PLC</label><br />
-						<button id="submit" class="submit" type="submit">
-							Submit
+						<button id="submition" class="submit" type="button">
+							Request Info
 						</button>
 					</div>
 				</div>
 			</form>
+			<section class="confirmation">
+				<div id="confirmation-message" class="confirmation-message">
+					<h3>Thank you for your request.</h3>
+					<h3>Someone will be in touch very soon.</h3>
+					<button id="close" type="button" class="close">
+						SUBMIT
+					</button>
+				</div>
+			</section>
 		</section>
 
 		<script type="text/javascript" src="app.js"></script>
