@@ -158,19 +158,6 @@ h3 {
 	}
 }
 
-.fadeout {
-	animation: fadeOutAnimation ease 0.5s;
-}
-
-@keyframes fadeOutAnimation {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
 .info-form {
 	position: absolute;
 	width: 100%;
@@ -205,7 +192,6 @@ h3 {
 .child {
 	width: 200px;
 	height: 410px;
-	border: solid 1px black;
 }
 
 .child input[type='text'],
@@ -213,6 +199,8 @@ input[type='email'] {
 	height: 25px;
 	width: 190px;
 	border-radius: 5px;
+	border: none;
+	padding: 0 4px;
 }
 
 .submit {
@@ -232,6 +220,19 @@ input[type='email'] {
 
 .submit:active {
 	transform: translateY(4px);
+}
+
+.fadeout {
+	animation: fadeOutAnimation ease 0.5s;
+}
+
+@keyframes fadeOutAnimation {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 /*----------------------------------------------
