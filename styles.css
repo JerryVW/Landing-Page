@@ -328,7 +328,29 @@ input[type='email'] {
 
 @media only screen and (max-width: 768px) {
 	.call-to-action h1 {
-		font-size: 1.8em;
+		font-size: 1.6em;
+	}
+	.action-container {
+		line-height: 30px;
+	}
+
+	h2 {
+		font-size: 1.4em;
+	}
+
+	h3 {
+		font-size: 1.4em;
+	}
+
+	.mobile-nav {
+		font-size: 1.4em;
+		margin-top: 24px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.call-to-action h1 {
+		font-size: 1.6em;
 	}
 
 	h2 {
@@ -336,16 +358,6 @@ input[type='email'] {
 	}
 
 	h3 {
-		font-size: 1.4em;
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	.call-to-action h1 {
-		font-size: 1.4em;
-	}
-
-	h3 {
-		font-size: 1.1em;
+		font-size: 1.2em;
 	}
 }
