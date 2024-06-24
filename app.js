@@ -12,10 +12,7 @@ let mobileDropdown = document.getElementById('mobile-dropdown');
 let navBar = document.getElementById('nav-bar');
 
 services.onclick = function () {
-	if (modalContent.style.display !== 'block') {
-		modalContent.style.display = 'block';
-		rotateArrow.classList.add('rotate-arrow');
-	} else {
+	if (modalContent.style.display === 'block') {
 		modalContent.classList.add('fadeout');
 		rotateArrow.classList.remove('rotate-arrow');
 
@@ -25,6 +22,9 @@ services.onclick = function () {
 			modalContent.classList.remove('fadeout');
 			modalContent.style.opacity = 1;
 		}, 500);
+	} else {
+		modalContent.style.display = 'block';
+		rotateArrow.classList.add('rotate-arrow');
 	}
 };
 
@@ -63,5 +63,9 @@ close.onclick = function () {
 };
 
 mobileDropdown.onclick = function () {
-	navBar.style.display = 'block';
+	if (navBar.style.diplay === 'block') {
+		navBar.style.display = 'none';
+	} else {
+		navBar.style.display = 'block';
+	}
 };
