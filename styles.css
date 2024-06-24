@@ -73,9 +73,15 @@ h2 {
 	margin-right: 35px;
 	margin-top: 35px;
 }
+.mobile-nav-container {
+	width: 100%;
+	font-size: 1.8em;
+	color: whitesmoke;
+	position: absolute;
+}
 
 .mobile-nav {
-	font-size: 1.8em;
+	all: unset;
 	margin-top: 24px;
 	margin-right: 35px;
 	display: none;
@@ -316,6 +322,7 @@ input[type='email'] {
 		margin-right: 35px;
 		margin-top: 35px;
 		display: none;
+		flex-direction: column;
 	}
 
 	.mobile-nav {

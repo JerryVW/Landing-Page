@@ -8,6 +8,8 @@ let rotateArrow = document.getElementById('rotate-arrow');
 let confirmationMessage = document.getElementById('confirmation-message');
 let close = document.getElementById('close');
 let infoForm = document.getElementById('info-form');
+let mobileDropdown = document.getElementById('mobile-dropdown');
+let navBar = document.getElementById('nav-bar');
 
 services.onclick = function () {
 	if (modalContent.style.display !== 'block') {
@@ -58,4 +60,8 @@ submit.onclick = function () {
 close.onclick = function () {
 	confirmationMessage.style.display = 'none';
 	infoForm.submit();
+};
+
+mobileDropdown.onclick = function () {
+	navBar.style.display = 'block';
 };
