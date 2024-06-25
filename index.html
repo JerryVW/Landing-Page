@@ -2,42 +2,37 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		/>
 		<title>Automation Training</title>
 	</head>
 	<body>
 		<section id="header">
-			<section class="nav-container">
-                
-				<h2>AUTOMATION TRAINING</h2>
-				<nav class="nav-header">
-					<ul id="nav-bar" class="nav-bar">
-						<li><a href="home.html">HOME</a></li>
-						<li><a href="about.html">ABOUT</a></li>
-						<li id="services">
-							SERVICES<span
-								id="rotate-arrow"
-								class="dropdown-arrow"
-								>&#60;</span
-							>
-						</li>
-						<li id="contact"><a href="contact.html">CONTACT</a></li>
-					</ul>
-				</nav>
+			<h2>AUTOMATION TRAINING</h2>
+			<nav class="nav-header">
+				<ul id="nav-bar" class="nav-bar">
+					<li><a href="home.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li id="services">
+						SERVICES<span id="rotate-arrow" class="dropdown-arrow"
+							>&#60;</span
+						>
+					</li>
 
-                <div id="mobile-nav" class="mobile-nav-container">
-					<button
-						type="button"
-						id="mobile-dropdown"
-						class="mobile-nav"
-					>
-                    <!-- CHANGE TO A FONT AWESOME CHARACTER INSTEAD -->
-						<span class="three-dot-button"> &#8942 </span>
-					</button>
+					<li id="contact"><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</nav>
+
+			<div id="mobile-nav" class="mobile-nav-container">
+				<div id="mobile-dropdown" class="mobile-nav">
+					<i class="fa-solid fa-ellipsis-vertical"></i>
 				</div>
-				
-			</section>
+			</div>
 
 			<section class="call-to-action">
 				<div id="action-container" class="action-container">
@@ -49,13 +44,14 @@
 					</button>
 				</div>
 			</section>
-
 			<section class="services-modal" id="services-modal">
 				<ul class="training-classes" id="modal-content">
 					<li><a href="abb.html">ABB Robot</a></li>
 					<li><a href="fanuc.html">Fanuc Robot</a></li>
 					<li><a href="build-plc.html">Building a PLC</a></li>
-					<li><a href="program-plc.html">Programming a PLC</a></li>
+					<li>
+						<a href="program-plc.html">Programming a PLC</a>
+					</li>
 				</ul>
 			</section>
 

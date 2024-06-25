@@ -57,6 +57,11 @@ h2 {
 	margin-top: 35px;
 }
 
+.nav-container {
+	width: 100%;
+	height: 50px;
+}
+
 .nav-header {
 	color: whitesmoke;
 	font-size: 1.6em;
@@ -64,29 +69,33 @@ h2 {
 
 .nav-bar {
 	list-style-type: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
+	display: inline-block;
+	float: right;
+	margin-top: 35px;
 }
 
 .nav-bar li {
 	margin-right: 35px;
-	margin-top: 35px;
+
+	display: inline;
 }
 .mobile-nav-container {
 	width: 100%;
-	font-size: 1.8em;
 	color: whitesmoke;
 	position: absolute;
 }
 
 .mobile-nav {
-	all: unset;
 	margin-top: 24px;
 	margin-right: 35px;
-	display: none;
+	height: 50px;
+	width: 25px;
+	border: 1px solid black;
 	cursor: pointer;
 	float: right;
+	padding: 6px 7px;
+
+	font-size: 2.2em;
 }
 
 .call-to-action {
@@ -148,24 +157,26 @@ h3 {
 }
 
 .services-modal {
-	display: flex;
-	flex-direction: row;
-	justify-content: end;
 }
 
 .training-classes {
 	list-style-type: none;
 	height: 150px;
-	width: 175px;
+	width: 190px;
 	background-color: #005786;
 	color: whitesmoke;
-	font-size: 1.2em;
+	font-size: 0.8em;
 	text-align: center;
 	line-height: 35px;
 	border-radius: 20px;
-	margin-right: 160px;
+	margin-right: 60px;
 	display: none;
 	animation: fadeInAnimation ease 0.5s;
+}
+
+.training-classes li {
+	display: block;
+	margin: auto;
 }
 
 @keyframes fadeInAnimation {
@@ -321,15 +332,27 @@ input[type='email'] {
 
 	.nav-bar {
 		margin-right: 35px;
-		display: flex;
-		display: block;
-		flex-direction: column;
-		align-items: end;
 		font-size: 0.8em;
+		display: none;
 	}
+
+	.nav-bar li {
+		display: block;
+	}
+
+	.services-modal {
+		font-size: 0.6em;
+		height: 150px;
+		width: 200px;
+	}
+
+	.services-modal li {
+		text-align: center;
+		display: block;
+	}
+
 	.training-classes {
 		margin-right: 55px;
-		margin-top: -180px;
 		display: none;
 		animation: fadeInAnimation ease 0.5s;
 	}
@@ -350,12 +373,10 @@ input[type='email'] {
 		}
 	}
 
-	/* .mobile-nav {
-		font-size: 1.8em;
-		margin-top: 24px;
-		margin-right: 35px;
+	.mobile-nav {
+		font-size: 2.2em;
 		display: block;
-	} */
+	}
 }
 
 @media only screen and (max-width: 768px) {
