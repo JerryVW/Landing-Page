@@ -2,7 +2,7 @@ let services = document.getElementById('services');
 let modalContent = document.getElementById('modal-content');
 let getStarted = document.getElementById('get-started');
 let classesInfo = document.getElementById('classes-info');
-let submit = document.getElementById('submition');
+let submit = document.getElementById('submit-form');
 let actionContainer = document.getElementById('action-container');
 let rotateArrow = document.getElementById('rotate-arrow');
 let confirmationMessage = document.getElementById('confirmation-message');
@@ -11,12 +11,11 @@ let infoForm = document.getElementById('info-form');
 let mobileDropdown = document.getElementById('mobile-dropdown');
 let navBar = document.getElementById('nav-bar');
 
-services.onclick = function () {
+services.onclick = () => {
 	if (modalContent.style.display === 'block') {
 		modalContent.classList.add('fadeout');
 		rotateArrow.classList.remove('rotate-arrow');
 
-		modalContent.style.opacity = 0;
 		setTimeout(function () {
 			modalContent.style.display = 'none';
 			modalContent.classList.remove('fadeout');
@@ -32,7 +31,6 @@ modalContent.addEventListener('mouseleave', function () {
 	modalContent.classList.add('fadeout');
 	rotateArrow.classList.remove('rotate-arrow');
 
-	modalContent.style.opacity = 0;
 	setTimeout(function () {
 		modalContent.style.display = 'none';
 		modalContent.classList.remove('fadeout');
@@ -45,11 +43,10 @@ getStarted.onclick = function () {
 	actionContainer.style.display = 'none';
 };
 
-submit.onclick = function () {
+submit.onclick = () => {
 	confirmationMessage.style.display = 'block';
 	classesInfo.classList.add('fadeout');
 
-	classesInfo.style.opacity = 0;
 	setTimeout(function () {
 		classesInfo.style.display = 'none';
 		classesInfo.classList.remove('fadeout');
@@ -62,10 +59,6 @@ close.onclick = function () {
 	infoForm.submit();
 };
 
-mobileDropdown.onclick = function () {
-	if (navBar.style.diplay === 'block') {
-		navBar.style.display = 'none';
-	} else {
-		navBar.style.display = 'block';
-	}
+mobileDropdown.onclick = () => {
+	navBar.classList.toggle('show');
 };

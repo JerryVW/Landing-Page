@@ -13,46 +13,50 @@
 	</head>
 	<body>
 		<section id="header">
-			<h2>AUTOMATION TRAINING</h2>
-			<nav class="nav-header">
-				<ul id="nav-bar" class="nav-bar">
-					<li><a href="home.html">HOME</a></li>
-					<li><a href="about.html">ABOUT</a></li>
-					<li id="services">
-						SERVICES<span id="rotate-arrow" class="dropdown-arrow"
-							>&#60;</span
-						>
-					</li>
-
-					<li id="contact"><a href="contact.html">CONTACT</a></li>
-				</ul>
-			</nav>
-
-			<div id="mobile-nav" class="mobile-nav-container">
+			<nav>
+				<h2>AUTOMATION TRAINING</h2>
 				<div id="mobile-dropdown" class="mobile-nav">
 					<i class="fa-solid fa-ellipsis-vertical"></i>
 				</div>
-			</div>
+				<ul id="nav-bar" class="nav-bar">
+					<li><a href="home.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li id="contact"><a href="contact.html">CONTACT</a></li>
+					<div class="dropdown">
+						<li id="services">
+							SERVICES<span
+								id="rotate-arrow"
+								class="dropdown-arrow"
+								>&#60;</span
+							>
+							<ul class="training-classes" id="modal-content">
+								<li><a href="abb.html">ABB Robot</a></li>
+								<li>
+									<a href="fanuc.html">Fanuc Robot</a>
+								</li>
+								<li>
+									<a href="build-plc.html">Building a PLC</a>
+								</li>
+								<li>
+									<a href="program-plc.html"
+										>Programming a PLC</a
+									>
+								</li>
+							</ul>
+						</li>
+					</div>
+				</ul>
+			</nav>
 
 			<section class="call-to-action">
 				<div id="action-container" class="action-container">
 					<h1>Want to Take Your Automation to the Next Level?</h1>
-					<h3>We can urn your Techs into automation aficionados.</h3>
+					<h3>We can turn your Techs into automation aficionados.</h3>
 					<h3>Click the button below to get started!</h3>
 					<button id="get-started" class="get-started">
 						GET STARTED
 					</button>
 				</div>
-			</section>
-			<section class="services-modal" id="services-modal">
-				<ul class="training-classes" id="modal-content">
-					<li><a href="abb.html">ABB Robot</a></li>
-					<li><a href="fanuc.html">Fanuc Robot</a></li>
-					<li><a href="build-plc.html">Building a PLC</a></li>
-					<li>
-						<a href="program-plc.html">Programming a PLC</a>
-					</li>
-				</ul>
 			</section>
 
 			<form id="info-form" class="info-form" action=" ">
@@ -105,7 +109,7 @@
 							id="program-plc"
 						/>
 						<label for="program-plc">Programming a PLC</label><br />
-						<button id="submition" class="submit" type="button">
+						<button id="submit-form" class="submit" type="button">
 							Request Info
 						</button>
 					</div>

@@ -50,53 +50,97 @@ a:link {
 	color: whitesmoke;
 }
 
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 85px;
+	width: 100%;
+}
+
 h2 {
-	position: absolute;
 	color: whitesmoke;
 	margin-left: 35px;
 	margin-top: 35px;
 }
 
-.nav-container {
-	width: 100%;
-	height: 50px;
-}
-
-.nav-header {
-	color: whitesmoke;
-	font-size: 1.6em;
-}
-
 .nav-bar {
+	display: flex;
+	flex-direction: row;
+	font-size: 1.6em;
+	color: whitesmoke;
 	list-style-type: none;
-	display: inline-block;
-	float: right;
 	margin-top: 35px;
 }
 
 .nav-bar li {
 	margin-right: 35px;
-
-	display: inline;
+	display: inline-block;
 }
-.mobile-nav-container {
-	width: 100%;
-	color: whitesmoke;
-	position: absolute;
+
+#services {
+	cursor: pointer;
+	margin-right: 65px;
 }
 
 .mobile-nav {
-	margin-top: 24px;
 	margin-right: 35px;
+	margin-top: 30px;
 	height: 50px;
 	width: 25px;
-	border: 1px solid black;
 	cursor: pointer;
-	float: right;
 	padding: 6px 7px;
-
-	font-size: 2.2em;
+	display: none;
+	font-size: 2.6em;
+	color: whitesmoke;
 }
+
+.training-classes {
+	position: absolute;
+	list-style-type: none;
+	height: 150px;
+	width: 190px;
+	background-color: #005786;
+	color: whitesmoke;
+	font-size: 0.8em;
+	text-align: center;
+	line-height: 35px;
+	border-radius: 20px;
+	float: none;
+	display: none;
+	animation: fadeInAnimation ease 0.5s;
+}
+
+.training-classes li {
+	display: block;
+	margin: auto;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.dropdown-arrow {
+	display: inline-block;
+	transform: rotate(-90deg);
+	margin-left: 5px;
+	transition: all ease 0.5s;
+}
+
+.rotate-arrow {
+	transform: rotate(90deg);
+	transition: all ease 0.5s;
+}
+
+/*----------------------------------------------
+2. Hero Section
+----------------------------------------------*/
 
 .call-to-action {
 	position: absolute;
@@ -150,54 +194,6 @@ h3 {
 
 .get-started:active {
 	transform: translateY(4px);
-}
-
-#services {
-	cursor: pointer;
-}
-
-.services-modal {
-}
-
-.training-classes {
-	list-style-type: none;
-	height: 150px;
-	width: 190px;
-	background-color: #005786;
-	color: whitesmoke;
-	font-size: 0.8em;
-	text-align: center;
-	line-height: 35px;
-	border-radius: 20px;
-	margin-right: 60px;
-	display: none;
-	animation: fadeInAnimation ease 0.5s;
-}
-
-.training-classes li {
-	display: block;
-	margin: auto;
-}
-
-@keyframes fadeInAnimation {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-.dropdown-arrow {
-	display: inline-block;
-	transform: rotate(-90deg);
-	margin-left: 5px;
-	transition: all ease 0.5s;
-}
-
-.rotate-arrow {
-	transform: rotate(90deg);
-	transition: all ease 0.5s;
 }
 
 .info-form {
@@ -331,50 +327,35 @@ input[type='email'] {
 	}
 
 	.nav-bar {
-		margin-right: 35px;
-		font-size: 0.8em;
 		display: none;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		width: 100%;
+		margin-top: 0px;
+	}
+
+	.nav-bar.show {
+		display: flex;
 	}
 
 	.nav-bar li {
 		display: block;
 	}
 
-	.services-modal {
-		font-size: 0.6em;
-		height: 150px;
-		width: 200px;
-	}
-
-	.services-modal li {
-		text-align: center;
-		display: block;
-	}
-
 	.training-classes {
-		margin-right: 55px;
+		width: 160px;
 		display: none;
+		font-size: 0.7em;
 		animation: fadeInAnimation ease 0.5s;
 	}
 
-	#contact {
-		margin-top: 155px;
-		animation: slideDownAnimation ease 0.8s;
-	}
-
-	@keyframes slideDownAnimation {
-		0% {
-			-webkit-transform: translateY(-155px);
-			transform: translateY(-155px);
-		}
-		100% {
-			-webkit-transform: translateY(0);
-			transform: translateY(0);
-		}
+	#services {
+		margin-right: 35px;
 	}
 
 	.mobile-nav {
-		font-size: 2.2em;
+		font-size: 2.6em;
 		display: block;
 	}
 }
@@ -396,8 +377,8 @@ input[type='email'] {
 	}
 
 	.mobile-nav {
-		font-size: 1.4em;
-		margin-top: 24px;
+		font-size: 2.2em;
+		margin-top: 34px;
 	}
 }
 
@@ -407,7 +388,7 @@ input[type='email'] {
 	}
 
 	h2 {
-		font-size: 1.2em;
+		font-size: 1.3em;
 	}
 
 	h3 {
