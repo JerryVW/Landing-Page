@@ -10,20 +10,26 @@ let close = document.getElementById('close');
 let infoForm = document.getElementById('info-form');
 let mobileDropdown = document.getElementById('mobile-dropdown');
 let navBar = document.getElementById('nav-bar');
+let screenWidth = window.matchMedia('(max-width: 500px)');
 
 services.onclick = () => {
 	if (modalContent.style.display === 'block') {
-		modalContent.classList.add('fadeout');
 		rotateArrow.classList.remove('rotate-arrow');
+		modalContent.classList.add('fadeout');
 
 		setTimeout(function () {
 			modalContent.style.display = 'none';
 			modalContent.classList.remove('fadeout');
 			modalContent.style.opacity = 1;
-		}, 500);
+		}, 300);
 	} else {
 		modalContent.style.display = 'block';
 		rotateArrow.classList.add('rotate-arrow');
+	}
+
+	if (screenWidth.matches) {
+		actionContainer.style.transform = 'translateY(80px)';
+		actionContainer.style.transition = 'all ease 0.5s';
 	}
 };
 
@@ -35,7 +41,7 @@ modalContent.addEventListener('mouseleave', function () {
 		modalContent.style.display = 'none';
 		modalContent.classList.remove('fadeout');
 		modalContent.style.opacity = 1;
-	}, 500);
+	}, 300);
 });
 
 getStarted.onclick = function () {
@@ -51,7 +57,7 @@ submit.onclick = () => {
 		classesInfo.style.display = 'none';
 		classesInfo.classList.remove('fadeout');
 		classesInfo.style.opacity = 1;
-	}, 500);
+	}, 300);
 };
 
 close.onclick = () => {
@@ -60,10 +66,5 @@ close.onclick = () => {
 };
 
 mobileDropdown.onclick = () => {
-	if (navBar.style.display == 'flex') {
-		navBar.classList.add('fadeout');
-		navBar.classList.remove('show');
-	} else {
-		navBar.classList.add('show');
-	}
+	navBar.classList.toggle('show');
 };
