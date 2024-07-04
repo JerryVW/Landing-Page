@@ -45,7 +45,8 @@ body {
 /*----------------------------------------------
 2. Header & Nav Styles
 ----------------------------------------------*/
-a:link {
+a:link,
+a:visited {
 	text-decoration: none;
 	color: whitesmoke;
 }
@@ -337,6 +338,7 @@ input[type='email'] {
 
 	.nav-bar.show {
 		display: flex;
+		animation: fadeInAnimation ease 0.5s;
 	}
 
 	.nav-bar li {
@@ -347,7 +349,6 @@ input[type='email'] {
 		width: 160px;
 		display: none;
 		font-size: 0.7em;
-		animation: fadeInAnimation ease 0.5s;
 	}
 
 	#services {

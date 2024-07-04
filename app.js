@@ -54,11 +54,16 @@ submit.onclick = () => {
 	}, 500);
 };
 
-close.onclick = function () {
+close.onclick = () => {
 	confirmationMessage.style.display = 'none';
 	infoForm.submit();
 };
 
 mobileDropdown.onclick = () => {
-	navBar.classList.toggle('show');
+	if (navBar.style.display == 'flex') {
+		navBar.classList.add('fadeout');
+		navBar.classList.remove('show');
+	} else {
+		navBar.classList.add('show');
+	}
 };
