@@ -349,18 +349,16 @@ input[type='email'] {
 		animation: fadeInAnimation ease 0.5s;
 	}
 
-	.nav-bar li {
+	.nav-bar li,
+	#services {
+		margin-right: 0px;
 		display: block;
 	}
 
 	.training-classes {
-		width: 160px;
+		width: 180px;
 		display: none;
 		font-size: 0.7em;
-	}
-
-	#services {
-		margin-right: 35px;
 	}
 
 	.mobile-nav {

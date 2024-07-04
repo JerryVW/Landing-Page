@@ -13,6 +13,14 @@ let navBar = document.getElementById('nav-bar');
 let screenWidth = window.matchMedia('(max-width: 992px)');
 
 services.onclick = () => {
+	if (screenWidth.matches) {
+		actionContainer.style.transform = 'translateY(120px)';
+		actionContainer.style.transition = 'all ease 0.5s';
+	} else if (modalContent.style.display === 'block') {
+		actionContainer.style.transform = 'translateY(0px)';
+		actionContainer.style.transition = 'all ease 0.5s';
+	}
+
 	if (modalContent.style.display === 'block') {
 		rotateArrow.classList.remove('rotate-arrow');
 		modalContent.classList.add('fadeout');
@@ -25,11 +33,6 @@ services.onclick = () => {
 	} else {
 		modalContent.style.display = 'block';
 		rotateArrow.classList.add('rotate-arrow');
-	}
-
-	if (screenWidth.matches) {
-		actionContainer.style.transform = 'translateY(120px)';
-		actionContainer.style.transition = 'all ease 0.5s';
 	}
 };
 
