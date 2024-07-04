@@ -10,7 +10,7 @@ let close = document.getElementById('close');
 let infoForm = document.getElementById('info-form');
 let mobileDropdown = document.getElementById('mobile-dropdown');
 let navBar = document.getElementById('nav-bar');
-let screenWidth = window.matchMedia('(max-width: 500px)');
+let screenWidth = window.matchMedia('(max-width: 992px)');
 
 services.onclick = () => {
 	if (modalContent.style.display === 'block') {
@@ -25,15 +25,20 @@ services.onclick = () => {
 	} else {
 		modalContent.style.display = 'block';
 		rotateArrow.classList.add('rotate-arrow');
+		actionContainer.style.transform = 'translateY(0px)';
+		actionContainer.style.transition = 'all ease 0.5s';
 	}
 
 	if (screenWidth.matches) {
-		actionContainer.style.transform = 'translateY(80px)';
+		actionContainer.style.transform = 'translateY(120px)';
+		actionContainer.style.transition = 'all ease 0.5s';
+	} else {
+		actionContainer.style.transform = 'translateY(0px)';
 		actionContainer.style.transition = 'all ease 0.5s';
 	}
 };
 
-modalContent.addEventListener('mouseleave', function () {
+modalContent.addEventListener('mouseleave', () => {
 	modalContent.classList.add('fadeout');
 	rotateArrow.classList.remove('rotate-arrow');
 
@@ -42,6 +47,11 @@ modalContent.addEventListener('mouseleave', function () {
 		modalContent.classList.remove('fadeout');
 		modalContent.style.opacity = 1;
 	}, 300);
+
+	if (screenWidth.matches) {
+		actionContainer.style.transform = 'translateY(0px)';
+		actionContainer.style.transition = 'all ease 0.5s';
+	}
 });
 
 getStarted.onclick = function () {
