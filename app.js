@@ -25,14 +25,12 @@ services.onclick = () => {
 	} else {
 		modalContent.style.display = 'block';
 		rotateArrow.classList.add('rotate-arrow');
-		actionContainer.style.transform = 'translateY(0px)';
-		actionContainer.style.transition = 'all ease 0.5s';
 	}
 
 	if (screenWidth.matches) {
 		actionContainer.style.transform = 'translateY(120px)';
 		actionContainer.style.transition = 'all ease 0.5s';
-	} else {
+	} else if (actionContainer.style.transform === 'translateY(120px)') {
 		actionContainer.style.transform = 'translateY(0px)';
 		actionContainer.style.transition = 'all ease 0.5s';
 	}
@@ -77,4 +75,11 @@ close.onclick = () => {
 
 mobileDropdown.onclick = () => {
 	navBar.classList.toggle('show');
+	if (screenWidth.matches) {
+		actionContainer.style.transform = 'translateY(0px)';
+		actionContainer.style.transition = 'all ease 0.5s';
+	} else {
+		actionContainer.style.transform = 'translateY(120px)';
+		actionContainer.style.transition = 'all ease 0.5s';
+	}
 };

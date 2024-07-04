@@ -323,6 +323,10 @@ input[type='email'] {
 }
 
 @media only screen and (max-width: 992px) {
+	h2 {
+		margin-top: 20px;
+	}
+
 	.call-to-action h1 {
 		font-size: 2em;
 	}
