@@ -30,9 +30,6 @@ services.onclick = () => {
 	if (screenWidth.matches) {
 		actionContainer.style.transform = 'translateY(120px)';
 		actionContainer.style.transition = 'all ease 0.5s';
-	} else if (actionContainer.style.transform === 'translateY(120px)') {
-		actionContainer.style.transform = 'translateY(0px)';
-		actionContainer.style.transition = 'all ease 0.5s';
 	}
 };
 
@@ -77,9 +74,6 @@ mobileDropdown.onclick = () => {
 	navBar.classList.toggle('show');
 	if (screenWidth.matches) {
 		actionContainer.style.transform = 'translateY(0px)';
-		actionContainer.style.transition = 'all ease 0.5s';
-	} else {
-		actionContainer.style.transform = 'translateY(120px)';
 		actionContainer.style.transition = 'all ease 0.5s';
 	}
 };
